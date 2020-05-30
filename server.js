@@ -42,6 +42,7 @@ app.get("/scrape", function(req, res) {
     $("article h2").each(function(i, element) {
      
       var result = {};
+      
 
       result.title = $(this)
         .children("a")
