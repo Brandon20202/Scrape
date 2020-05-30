@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Scrape</title>
     <style>
-      body { background-color:tan }
+      body { background-color:lightgrey }
       #wrapper {
         width: 960px;
         margin-left: auto;
@@ -38,10 +38,21 @@
   </head>
   <body>
     <div id="wrapper">
-      <h1>NYTIME Scraper</h1>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">New York Times News Scraper</h1>
+          <p class="lead">Leave a Comment on the articles.</p>
+        </div>
+      </div>
+     
       <h2><i></i></h2>
-      <div id="articles"></div>
-      <div id="notes"></div>
+      <div class="card">
+        <div class="card-body" id="articles">
+          
+        </div>
+        <div id="notes"></div>
+      </div>
+      
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="app.js"></script>
