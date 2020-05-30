@@ -32,7 +32,7 @@ mongoose.connect(MONGODB_URI);
 // Routes
 
 // A GET route for scraping the website
-app.get("/", function(req, res) {
+app.get("/scrape", function(req, res) {
 
   axios.get("https://www.nytimes.com/section/us").then(function(response) {
     
