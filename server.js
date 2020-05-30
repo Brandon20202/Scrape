@@ -26,11 +26,9 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-if (process.env.MONGODB_URI) {
-  mongoose = mongoose.connect(process.env.MONGODB_URI);
-} else {
-  mongoose = mongoose.connect("mongodb://localhost/scrape");
-}
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
+
+mongoose.connect(MONGODB_URI);
 // Routes
 
 // A GET route for scraping the website
